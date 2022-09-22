@@ -2,13 +2,13 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 public class Festmeny {
-    private String cim;
-    private String festo;
-    private String stilus;
-    private Integer licitekSzama = 0;
-    private Integer legmagasabbLicit = 0;
-    private LocalDateTime legutolsoLicitIdeje;
-    private Boolean elkelt = false;
+    public String cim;
+    public  String festo;
+    public String stilus;
+    public Integer licitekSzama = 0;
+    public Integer legmagasabbLicit = 0;
+    public LocalDateTime legutolsoLicitIdeje;
+    public Boolean elkelt = false;
 
     public String getFesto() {
         return this.festo = festo;
@@ -47,6 +47,12 @@ public class Festmeny {
             legmagasabbLicit += seged;
             legutolsoLicitIdeje = LocalDateTime.now();
         }
+    }
+
+    @Override
+    public String toString() {
+
+        return super.toString();
     }
 }
 

@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class Festmeny {
     private String cim;
@@ -28,14 +29,23 @@ public class Festmeny {
         return this.elkelt = elkelt;
     }
     public void setElkelt() {
-
+        elkelt = true;
     }
     public void licit() {
         if (elkelt = true) {
             System.err.println("A festmény már elkelt!");
         }
+        else if (licitekSzama == 0) {
+            licitekSzama++;
+            legutolsoLicitIdeje = LocalDateTime.now();
+            legmagasabbLicit = 100;
+        }
         else {
-
+            licitekSzama++;
+            int seged = 0;
+            seged = legmagasabbLicit / 10;
+            legmagasabbLicit += seged;
+            legutolsoLicitIdeje = LocalDateTime.now();
         }
     }
 }
